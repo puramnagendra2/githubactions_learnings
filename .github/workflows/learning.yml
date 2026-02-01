@@ -10,12 +10,14 @@ jobs:
         run: echo "Hello This is Build Phase"
   test:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Hello to Test Phase
         run: echo "Hello This is Test Phase"
   deploy:
     runs-on: ubuntu-latest
+    needs: test
     steps:
       - name: Hello Deploy Phase
-        run: echo "Hello This is Deploy Phase
+        run: echo "Hello This is Deploy Phase"
     
