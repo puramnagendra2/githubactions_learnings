@@ -3,9 +3,19 @@ name: Hello world
 on: workflow_dispatch
 
 jobs:
-  hello:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello Print
-        run: echo "Hello Github Actions"
+      - name: Hello Build Phase
+        run: echo "Hello This is Build Phase"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello to Test Phase
+        run: echo "Hello This is Test Phase"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello Deploy Phase
+        run: echo "Hello This is Deploy Phase
     
